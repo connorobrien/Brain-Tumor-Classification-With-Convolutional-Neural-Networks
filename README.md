@@ -3,9 +3,9 @@ CS7641 Project Group #30 - Spring 2021
 
 Clayton Horsfall, Georgia Institute of Technology, chorsfall3@gatech.edu 
 
-Seil Kwon, Georgia Institute of Technology, 
+Seil Kwon, Georgia Institute of Technology, skwon96@gatech.edu 
 
-skwon96@gatech.edu Connor O’Brien, Georgia Institute of Technology, connor.obrien@gatech.edu 
+Connor O’Brien, Georgia Institute of Technology, connor.obrien@gatech.edu 
 
 Aidan Worswick, Georgia Institute of Technology, aidan.worswick@gatech.edu 
 
