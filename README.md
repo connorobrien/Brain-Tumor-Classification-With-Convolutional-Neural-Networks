@@ -22,8 +22,12 @@ Another major limitation is our data size. Deep learning methodologies require l
 
 ### References
 Bangalore Yogananda CG, Shah BR, Vejdani-Jahromi M, et al. A Fully Automated Deep Learning Network for Brain Tumor Segmentation. Tomography. 2020;6(2):186-193. doi:10.18383/j.tom.2019.00026
+
 Khan MA, Ashraf I, Alhaisoni M, et al. Multimodal Brain Tumor Classification Using Deep Learning and Robust Feature Selection: A Machine Learning Application for Radiologists. Diagnostics (Basel). 2020;10(8):565. Published 2020 Aug 6. doi:10.3390/diagnostics10080565
+
 Oh, K., Chung, YC., Kim, K.W. et al. Classification and Visualization of Alzheimer’s Disease using Volumetric Convolutional Neural Network and Transfer Learning. Sci Rep 9, 18150 (2019). https://doi.org/10.1038/s41598-019-54548-6
+
 Toprak A. Extreme Learning Machine (ELM)-Based Classification of Benign and Malignant Cells in Breast Cancer. Med Sci Monit. 2018;24:6537-6543. Published 2018 Sep 17. doi:10.12659/MSM.910520
+
 Vemuri P, Wiste HJ, Weigand SD, et al. MRI and CSF biomarkers in normal, MCI, and AD subjects: diagnostic discrimination and cognitive correlations. Neurology. 2009;73(4):287-293. doi:10.1212/WNL.0b013e3181af79e5
 Wee CY, Yap PT, Shen D. Prediction of Alzheimer’s disease and mild cognitive impairment using cortical morphological patterns. Hum. Brain Mapp. 2013;34:3411–3425. doi: 10.1002/hbm.22156.
