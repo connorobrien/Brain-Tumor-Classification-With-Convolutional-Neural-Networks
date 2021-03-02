@@ -19,8 +19,11 @@ Construct a deep learning convolution neural network (CNN) model to detect Alzhe
 
 ### Methods
 Our primary method will be a CNN, as they have achieved high classification accuracy in similar medical image diagnosis research. We will explore using both 2D and 3D CNN approaches, as well as using a two- track CNN approach (e.g., VGG19 and VGG16).
+
 We will primarily use the Keras library with a TensorFlow backend to train the model. For our classifier, we will begin with supervised methods and an Extreme Learning Machine classification approach as it had proved highly accurate on similar problems. We will also investigate other classification procedures, such as Naïve Bayes, Support Vector Machines, SoftMax, and Ensemble Tree classifiers.
+
 If an imbalance in the training data proves to be an issue, we will use data augmentation to train our CNN model and tune the pre-trained model using methods such as Generative Adversarial Networks.
+
 We will initially develop our model with supervised methods, then work on an unsupervised model, as well as combine new methods such as few-shot learning and zero-shot learning. Finally, depending on the feasibility, we will deploy an app with our model that can classify Alzheimer’s disease from new MRI scans.
 
 ### Potential Results
@@ -28,6 +31,7 @@ Our model will use a CNN approach on 2D MRI images for the multi-modality classi
 
 ### Discussion
 Early diagnosis of Alzheimer's disease is extremely important for the initiation of effective treatment and future therapeutic development. While our model uses 2D images, AD diagnoses is generally a more complicated problem that requires 3D images, multiple cross sections, and complex data. However, we hope our preprocessing techniques, validation, and optimization strategies can establish groundwork for further exploration.
+
 Another major limitation is our data size. Deep learning methodologies require large amounts of training data. While hybrid methods that combine traditional machine learning with deep learning approaches can be useful when there is limited data, ongoing collection of patients’ information in datasets such as ADNI is crucial to the academic research of this problem.
 
 ### References
