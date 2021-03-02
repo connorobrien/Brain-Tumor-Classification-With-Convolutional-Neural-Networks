@@ -40,4 +40,4 @@ Oh, K., Chung, YC., Kim, K.W. et al. Classification and Visualization of Alzheim
 Toprak A. Extreme Learning Machine (ELM)-Based Classification of Benign and Malignant Cells in Breast Cancer. Med Sci Monit. 2018;24:6537-6543. Published 2018 Sep 17. doi:10.12659/MSM.910520
 
 Vemuri P, Wiste HJ, Weigand SD, et al. MRI and CSF biomarkers in normal, MCI, and AD subjects: diagnostic discrimination and cognitive correlations. Neurology. 2009;73(4):287-293. doi:10.1212/WNL.0b013e3181af79e5
-Wee CY, Yap PT, Shen D. Prediction of Alzheimer’s disease and mild cognitive impairment using cortical morphological patterns. Hum. Brain Mapp. 2013;34:3411–3425. doi: 10.1002/hbm.22156.
+Wee CY, Yap PT, Shen D. Prediction of Alzheimer’s disease and mild cognitive impairment using cortical morphological patterns. Hum. Brain Mapp. 2013;34:3411–3425. doi: 10.1002/hbm.22156. 
