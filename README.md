@@ -19,7 +19,9 @@ If an imbalance in the training data proves to be an issue, we will use data aug
 We will initially develop our model with supervised methods, then work on an unsupervised model, as well as combine new methods such as few-shot learning and zero-shot learning. Finally, depending on the feasibility, we will deploy an app with our model that can classify Alzheimer’s disease from new MRI scans.
 
 ### Potential Results
-Our model will use a CNN approach on 2D MRI images for the multi-modality classification of Alzheimer's Disease. The dataset contains 1075 patient MRI scans classified as having Alzheimer’s Disease (AD), Mild Cognitive Impairment (MCI), or Cognitively Normal (CN). Wee et. al. achieved an AD classification accuracy of 92.35% in a similar Alzheimer’s disease classification problem, and we hope to match or improve upon their prediction accuracy.
+Our model will use a CNN approach on 2D MRI images for the multi-modality classification of Alzheimer's Disease. The dataset contains 1075 patient MRI scans classified as having Alzheimer’s Disease (AD), Mild Cognitive Impairment (MCI), or Cognitively Normal (CN). 
+
+Wee et. al. achieved an AD classification accuracy of 92.35% in a similar Alzheimer’s disease classification problem, and we hope to match or improve upon their prediction accuracy.
 
 ### Discussion
 Early diagnosis of Alzheimer's disease is extremely important for the initiation of effective treatment and future therapeutic development. While our model uses 2D images, AD diagnoses is generally a more complicated problem that requires 3D images, multiple cross sections, and complex data. However, we hope our preprocessing techniques, validation, and optimization strategies can establish groundwork for further exploration.
