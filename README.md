@@ -1,6 +1,6 @@
 # Project Proposal
 ## Deep Learning for Alzheimer's Disease Detection
-CS7641 Project Group #30 - Spring 2021
+### CS7641 Project Group #30 - Spring 2021
 
 Clayton Horsfall, Georgia Institute of Technology, chorsfall3@gatech.edu 
 
