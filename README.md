@@ -36,19 +36,18 @@ Our final model achieved a 67% classification accuracy with a ROC area under cur
 </p>
 
 
-Further, our model can predict the class probabilities for MRI scans. The predicted probabilities for the MRI scan pictured below are 54% cognitively normal and 46% Alzheimer’s diseases. 
+Further, our model can predict the class probabilities for MRI scans, a feature we believe has practical value in a professional setting. For example, the predicted probabilities for the MRI scan pictured below are 54% cognitively normal and 46% Alzheimer’s Disease. 
  
  <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Deep-Learning-for-Alzheimers-Disease-Detection/main/Images/example_mri_scan.png?token=ASLEFKPUOLC2VVHS4FO4YXLAPCGGKE' width="500">
 </p>
  
-
-Bae et. al. achieved an AOC value of 0.890 in a similar Alzheimer’s disease classification problem, and in the following weeks we hope to match or improve upon their prediction accuracy.
+Bae et. al. achieved an AOC value of 0.890 in a similar Alzheimer’s disease classification problem, and in the following weeks we hope to match or improve upon their prediction accuracy.  
 
 ## Discussion
 As we progress towards our final report, there are several areas where we will look to improve our model and add additional features. First, we will experiment with our CNN layers and parameters to improve our model’s classification accuracy. We will also look to incorporate multiclass classification that includes patients with mild cognitive impairment, along with those classified as cognitively normal and having Alzheimer’s disease.
 
-Further, in an attempt to overcome our small sample size, we will experiment with different Generative Adversarial Networks (GANs) for image synthesis. Yi et al, 2019, surveyed 150 published articles using adversarial training schemes in medical imaging. Common GAN medical image reconstruction approaches include pix2pix, CycleGan, and SGAN, common loss measures adversarial loss and element wise fidelity loss, and common quantitative measures include normalized MSE with respect to ground trough, and peak signal to noise ratio with respect to ground truth. We will aim to incorporate at least one GAN image synthesis approach to artificially increase the size of the training data. 
+Further, in an attempt to overcome our small sample size, we will experiment with different Generative Adversarial Networks (GANs) for image synthesis. Yi et al, 2019, surveyed 150 published articles using adversarial training schemes in medical imaging. Common GAN medical image reconstruction approaches include pix2pix, CycleGan, and SGAN. Further, common loss measures adversarial loss and element wise fidelity loss, and common quantitative measures include normalized MSE with respect to ground trough and peak signal to noise ratio with respect to ground truth. We will aim to incorporate at least one GAN image synthesis approach to artificially increase the size of the training data. 
 
 Early diagnosis of Alzheimer's disease is extremely important for the initiation of effective treatment and future therapeutic development. We hope our preprocessing techniques, validation, and optimization strategies can establish groundwork for further exploration. While hybrid methods that combine traditional machine learning with deep learning approaches can be useful when there is limited data, ongoing collection of patients’ information in datasets such as ADNI is crucial to the academic research of this problem.
 
