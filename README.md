@@ -1,5 +1,4 @@
 # Midterm Report
-## CS7641 Project Group #30 - Spring 2021
 Clayton Horsfall, Seil Kwon, Connor O’Brien, Aidan Worswick, Andrew Yuchen Lin
 ## Introduction/Background
 Alzheimer’s disease is currently the 6th leading cause of death in the United States. It is the most common type of dementia and more than 5 million Americans are living with Alzheimer’s disease. Timely diagnosis of dementia is crucial to allow patients to receive treatments for their symptoms, reduce patients’ anxiety, and save patients money by avoiding long-term medical costs. Alzheimer’s disease is typically diagnosed by highly specialized medical professionals after analyzing Magnetic Resonance Imaging (MRI) scans. This process is costly, and a machine learning approach to Alzheimer’s disease diagnosis from MRIs could greatly improve patient outcomes.
