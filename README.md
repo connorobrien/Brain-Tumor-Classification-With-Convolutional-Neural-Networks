@@ -41,7 +41,7 @@ Further, our model can predict the class probabilities for MRI scans. The predic
 </p>
  
 
-Wee et. al. achieved an AD classification accuracy of 92.35% in a similar Alzheimer’s disease classification problem, and in the following weeks we hope to match or improve upon their prediction accuracy.
+Bae et. al. achieved an AOC value of 0.890 in a similar Alzheimer’s disease classification problem, and in the following weeks we hope to match or improve upon their prediction accuracy.
 
 ## Discussion
 As we progress towards our final report, there are several areas where we will look to improve our model and add additional features. First, we will experiment with our CNN layers and parameters to improve our model’s classification accuracy. We will also look to incorporate multiclass classification that includes patients with mild cognitive impairment, along with those classified as cognitively normal and having Alzheimer’s disease.
@@ -51,6 +51,8 @@ Further, in an attempt to overcome our small sample size, we will experiment wit
 Early diagnosis of Alzheimer's disease is extremely important for the initiation of effective treatment and future therapeutic development. We hope our preprocessing techniques, validation, and optimization strategies can establish groundwork for further exploration. While hybrid methods that combine traditional machine learning with deep learning approaches can be useful when there is limited data, ongoing collection of patients’ information in datasets such as ADNI is crucial to the academic research of this problem.
 
 ## References
+Bae, J.B., Lee, S., Jung, W. et al. Identification of Alzheimer's disease using a convolutional neural network model based on T1-weighted magnetic resonance imaging. Sci Rep 10, 22252 (2020). https://doi.org/10.1038/s41598-020-79243-9
+
 Bangalore Yogananda CG, Shah BR, Vejdani-Jahromi M, et al. A Fully Automated Deep Learning Network for Brain Tumor Segmentation. Tomography. 2020;6(2):186-193. doi:10.18383/j.tom.2019.00026
 
 Hasib Zunair, Aimon Rahman, Nabeel Mohammed, & Joseph Paul Cohen. (2020). Uniformizing Techniques to Process CT scans with 3D CNNs for Tuberculosis Prediction.
