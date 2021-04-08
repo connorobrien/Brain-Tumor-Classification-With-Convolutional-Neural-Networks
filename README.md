@@ -8,7 +8,7 @@ Alzheimer’s disease is currently the 6th leading cause of death in the United 
 Construct a deep learning convolution neural network (CNN) model to detect Alzheimer’s disease, using multi-level and multimodal features of Alzheimer’s Disease Neuroimaging Initiative (ADNI) MRI brain scans. 
 
 ##  Data Collection
-The data set collection (provided by ADNI) includes 199 baseline 3T MRI scans, each classified as cognitively normal (CN), mild cognitive impairment (MCI), or Alzheimer’s Disease (AD). The data also include demographic variables such as the subject’s age and sex. 
+The data set collection (provided by ADNI) includes 199 baseline 3T MRI scans, each classified as cognitively normal (CN), mild cognitive impairment (MCI), or Alzheimer’s Disease (AD). The data also include demographic variables such as the subject’s age and sex, as well as the date the scan was taken. The MRI images were provided in a NIfTI format, which we converted to 3D arrays using [NiBabel](https://nipy.org/nibabel/).
 
 ## Methods
 
