@@ -31,7 +31,9 @@ The model was compiled with a binary cross entropy loss function and optimized u
 ## Results
 Our final model achieved a 67% classification accuracy with a ROC area under curve of 69%. The model accuracy and loss for the training and validation sets are plotted below.
 
-...adding image here later...
+ <p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Deep-Learning-for-Alzheimers-Disease-Detection/main/Images/model_statisticcs.png?token=ASLEFKPPVGPPHZPI67BHFTLAPDEIM' width="500">
+</p>
 
 
 Further, our model can predict the class probabilities for MRI scans. The predicted probabilities for the MRI scan pictured below are 54% cognitively normal and 46% Alzheimer’s diseases. 
