@@ -18,6 +18,12 @@ We subsequently normalized the image data, fixed the orientation by rotating the
 
 ## Methods
 Our primary supervised method is a convolution neural network (CNN), as they have achieved high classification accuracy in similar medical image diagnosis research. We utilized the Keras library with a TensorFlow backend to train the CNN model. Our current approach is based on a CNN model developed by Zunair et al., 2020, utilizing convolution layers, max and average pooling, batch normalization, dense layers, and dropout layers. Our CNN model concludes with a binary SoftMax classifier. 
+
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Deep-Learning-for-Alzheimers-Disease-Detection/main/Images/CNN_Model.png' width="700">
+</p>
+<br>
+
  
 The model was compiled with a binary cross entropy loss function and optimized using the Adam algorithm introduced by Kingma et al., 2014. The Adam algorithm has an initial learning rate of 0.001 with a custom exponential decay schedule.
 
