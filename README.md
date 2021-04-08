@@ -20,7 +20,8 @@ We subsequently normalized the image data, fixed the orientation by rotating the
 Our primary supervised method is a convolution neural network (CNN), as they have achieved high classification accuracy in similar medical image diagnosis research. We utilized the Keras library with a TensorFlow backend to train the CNN model. Our current approach is based on a CNN model developed by Zunair et al., 2020, utilizing convolution layers, max and average pooling, batch normalization, dense layers, and dropout layers. Our CNN model concludes with a binary SoftMax classifier. 
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Deep-Learning-for-Alzheimers-Disease-Detection/main/Images/CNN_Model.png?token=ASLEFKNNA4WGUUBNETFDNHDAPCF3E' width="700">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Deep-Learning-for-Alzheimers-Disease-Detection/main/Images/CNN_Model.png?token=ASLEFKNNA4WGUUBNETFDNHDAPCF3E' width="5
+  00">
 </p>
 
 The model was compiled with a binary cross entropy loss function and optimized using the Adam algorithm introduced by Kingma et al., 2014. Our Adam algorithm has an initial learning rate of 0.001 with a custom exponential decay schedule.
@@ -33,7 +34,7 @@ Our final model achieved a 67% classification accuracy with a ROC area under cur
 Further, our model can predict the class probabilities for MRI scans. The predicted probabilities for the MRI scan pictured below are 54% cognitively normal and 46% Alzheimer’s diseases. 
  
  <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Deep-Learning-for-Alzheimers-Disease-Detection/main/Images/example_mri_scan.png?token=ASLEFKPUOLC2VVHS4FO4YXLAPCGGKE' width="700">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Deep-Learning-for-Alzheimers-Disease-Detection/main/Images/example_mri_scan.png?token=ASLEFKPUOLC2VVHS4FO4YXLAPCGGKE' width="500">
 </p>
  
 
