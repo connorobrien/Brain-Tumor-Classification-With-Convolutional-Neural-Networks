@@ -20,11 +20,10 @@ The MRI data had been uniformly preprocessed by ADNI using Gradwarp, B1 non-unif
 
 We subsequently normalized the image data, fixed the orientation by rotating the volumes by 90 degrees, and resized the volumes so they are at the same width (256,256,166). Finally, due to the small sample size, we used data augmentation to artificially expand the sample size. Our current data augmentation involves slightly rotating (-20 to 20) the volumes. As will be discussed later, we seek to implement Generative Adversarial Network for image synthesis to increase the training data size.
 
-
 Our primary supervised method is a convolution neural network (CNN), as they have achieved high classification accuracy in similar medical image diagnosis research. We utilized the Keras library with a TensorFlow backend to train the CNN model. Our current approach is based on a CNN model developed by Zunair et al., 2020, utilizing convolution layers, max and average pooling, batch normalization, dense layers, and dropout layers. Our CNN model concludes with a binary SoftMax classifier. 
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Deep-Learning-for-Alzheimers-Disease-Detection/main/Images/CNN_Model.png?token=ASLEFKNNA4WGUUBNETFDNHDAPCF3E' width="5
+  <img src='https://i.imgur.com/1YEUN2w.png' width="5
   00">
 </p>
 
