@@ -1,4 +1,4 @@
-# Project Proposal
+# Midterm Report
 ## CS7641 Project Group #30 - Spring 2021
 Clayton Horsfall, Seil Kwon, Connor O’Brien, Aidan Worswick, Andrew Yuchen Lin
 ## Introduction/Background
