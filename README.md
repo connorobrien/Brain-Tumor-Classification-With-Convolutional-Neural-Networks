@@ -23,8 +23,7 @@ We subsequently normalized the image data, fixed the orientation by rotating the
 Our primary supervised method is a convolution neural network (CNN), as they have achieved high classification accuracy in similar medical image diagnosis research. We utilized the Keras library with a TensorFlow backend to train the CNN model. Our current approach is based on a CNN model developed by Zunair et al., 2020, utilizing convolution layers, max and average pooling, batch normalization, dense layers, and dropout layers. Our CNN model concludes with a binary SoftMax classifier. 
 
 <p align="center">
-  <img src='https://i.imgur.com/1YEUN2w.png' width="5
-  00">
+  <img src='https://i.imgur.com/1YEUN2w.png' width="500">
 </p>
 
 The model was compiled with a binary cross entropy loss function and optimized using the Adam algorithm introduced by Kingma et al., 2014. Our Adam algorithm has an initial learning rate of 0.001 with a custom exponential decay schedule.
