@@ -8,7 +8,11 @@ Alzheimer’s disease is currently the 6th leading cause of death in the United 
 Construct a deep learning convolution neural network (CNN) model to detect Alzheimer’s disease, using multi-level and multimodal features of Alzheimer’s Disease Neuroimaging Initiative (ADNI) MRI brain scans. 
 
 ##  Data Collection
-The data set collection (provided by ADNI) includes 199 baseline 3T MRI scans, each classified as cognitively normal (CN), mild cognitive impairment (MCI), or Alzheimer’s Disease (AD). The data also include demographic variables such as the subject’s age and sex. The MRI data has been uniformly preprocessed by ADNI using Gradwarp, B1 non-uniformity, N3, and scaling. These procedures, taken from Wyman et al., 2013, are as follows:
+The data set collection (provided by ADNI) includes 199 baseline 3T MRI scans, each classified as cognitively normal (CN), mild cognitive impairment (MCI), or Alzheimer’s Disease (AD). The data also include demographic variables such as the subject’s age and sex. 
+
+## Methods
+
+The MRI data had been uniformly preprocessed by ADNI using Gradwarp, B1 non-uniformity, N3, and scaling. These procedures, taken from Wyman et al., 2013, are as follows:
 
 1.	Gradwarp: Gradwarp is a system-specific correction of image geometry distortion due to gradient non-linearity. The degree to which images are distorted due to gradient non-linearity varies with each specific gradient model. We anticipate that most users will prefer to use images which have been corrected for gradient non-linearity distortion in analyses.
 2.	B1 non-uniformity: this correction procedure employs the B1 calibration scans noted in the protocol above to correct the image intensity non-uniformity that results when RF transmission is performed with a more uniform body coil while reception is performed with a less uniform head coil.
@@ -16,7 +20,7 @@ The data set collection (provided by ADNI) includes 199 baseline 3T MRI scans, e
 
 We subsequently normalized the image data, fixed the orientation by rotating the volumes by 90 degrees, and resized the volumes so they are at the same width (256,256,166). Finally, due to the small sample size, we used data augmentation to artificially expand the sample size. Our current data augmentation involves slightly rotating (-20 to 20) the volumes. As will be discussed later, we seek to implement Generative Adversarial Network for image synthesis to increase the training data size.
 
-## Methods
+
 Our primary supervised method is a convolution neural network (CNN), as they have achieved high classification accuracy in similar medical image diagnosis research. We utilized the Keras library with a TensorFlow backend to train the CNN model. Our current approach is based on a CNN model developed by Zunair et al., 2020, utilizing convolution layers, max and average pooling, batch normalization, dense layers, and dropout layers. Our CNN model concludes with a binary SoftMax classifier. 
 
 <p align="center">
