@@ -2,7 +2,7 @@
 Clayton Horsfall, Seil Kwon, Connor O’Brien, Aidan Worswick, Andrew Yuchen Lin
 ## 1. Introduction/Background
 <p align="center">
-  <img src='https://github.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/blob/main/Images/different_tumor_types.png' width="600">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/different_tumor_types.png?token=ASLEFKNFMICL2ZHTHY7S2ZTASHJI2' width="600">
 </p>
 
 ## 2. Problem Definition
@@ -10,10 +10,10 @@ Clayton Horsfall, Seil Kwon, Connor O’Brien, Aidan Worswick, Andrew Yuchen Lin
 ## 4. Literature Survey
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/googlenet.jpg?token=ASLEFKPQAQ6EFNHDAFOCBDTASHDRW' width="600">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/googlenet.jpg?token=ASLEFKPKRS26TH7FB7XEF23ASHJL6' width="600">
 </p>
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/googlenet2.jpg?token=ASLEFKJ2OIAPOVQQRHFRFEDASHDS4' width="500">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/googlenet2.jpg?token=ASLEFKJ2OIAPOVQQRHFRFEDASHDS4' width="500">
 </p>
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/augmentation.jpg?token=ASLEFKJLOGXLA7BFPF6Y7WTASHDRQ' width="500">
