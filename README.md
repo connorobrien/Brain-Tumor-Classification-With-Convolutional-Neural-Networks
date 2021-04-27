@@ -1,21 +1,65 @@
 # Final Report
 Clayton Horsfall, Seil Kwon, Connor O’Brien, Aidan Worswick, Andrew Yuchen Lin
 ## Introduction/Background
-
+<p align="center">
+  <img src='https://github.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/blob/main/Images/different_tumor_types.png' width="600">
+</p>
 
 ## Problem Definition
 
-
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/googlenet.jpg?token=ASLEFKPQAQ6EFNHDAFOCBDTASHDRW' width="600">
+</p>
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/googlenet2.jpg?token=ASLEFKJ2OIAPOVQQRHFRFEDASHDS4' width="500">
+</p>
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/augmentation.jpg?token=ASLEFKJLOGXLA7BFPF6Y7WTASHDRQ' width="500">
+</p>
 ##  Data Collection
 
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/Primary_model_architecture.jpg?token=ASLEFKN2I23SLPUCLNGOC53ASHDYG' width="800">
+</p>
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/resnet.jpg?token=ASLEFKMGZMND2QEWSW22QJ3ASHDY4' width="500">
+</p>
+
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/fewshot.jpg?token=ASLEFKJN5GVF3NNQMCT3LSLASHDZW' width="400">
+</p>
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/sigmoid.png?token=ASLEFKLKR363VVO4RULNNETASHD4I' width="400">
+</p>
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/gan_input.png?token=ASLEFKMEGDGFQCRNO3A7N3TASHD5E' width="700">
+</p>
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/gan_brains.png?token=ASLEFKIX6UC3C3ECZHITEDLASHD6O' width="700">
+</p>
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/gan_faces.png?token=ASLEFKKSBT3WIV5UDRKKQUDASHD6W' width="700">
+</p>
 
 ## Methods
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/Primary_cnn_model_AUC.jpg?token=ASLEFKK5LNV2MRIPVQ5VFWTASHDBO' width="700">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/Primary_cnn_model_AUC.jpg?token=ASLEFKK5LNV2MRIPVQ5VFWTASHDBO' width="800">
 </p>
 
 ## Results
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/table_model_accuracy.png?token=ASLEFKINEFXRE655HEM4KA3ASHE6O' width="800">
+</p>
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/Primary_cnn_model_AUC.jpg?token=ASLEFKLBDLUR2OIVSCUW3G3ASHE7U' width="800">
+</p>
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/ResNet18_AUC.jpg?token=ASLEFKKBO26ZXC25PNVR4NTASHFAQ' width="800">
+</p>
+<p align="center">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/table_fewshot.png?token=ASLEFKOFR36ZLL2T3BUSEQLASHE7I' width="800">
+</p>
 
 
 ## Discussion
