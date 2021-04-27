@@ -1,11 +1,13 @@
 # Final Report
 Clayton Horsfall, Seil Kwon, Connor O’Brien, Aidan Worswick, Andrew Yuchen Lin
-## Introduction/Background
+## 1. Introduction/Background
 <p align="center">
   <img src='https://github.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/blob/main/Images/different_tumor_types.png' width="600">
 </p>
 
-## Problem Definition
+## 2. Problem Definition
+## 3. Data Collection
+## 4. Literature Survey
 
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/googlenet.jpg?token=ASLEFKPQAQ6EFNHDAFOCBDTASHDRW' width="600">
@@ -16,7 +18,7 @@ Clayton Horsfall, Seil Kwon, Connor O’Brien, Aidan Worswick, Andrew Yuchen Lin
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/augmentation.jpg?token=ASLEFKJLOGXLA7BFPF6Y7WTASHDRQ' width="500">
 </p>
-##  Data Collection
+## 5. Methods
 
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/Primary_model_architecture.jpg?token=ASLEFKN2I23SLPUCLNGOC53ASHDYG' width="800">
@@ -41,13 +43,8 @@ Clayton Horsfall, Seil Kwon, Connor O’Brien, Aidan Worswick, Andrew Yuchen Lin
   <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/gan_faces.png?token=ASLEFKKSBT3WIV5UDRKKQUDASHD6W' width="700">
 </p>
 
-## Methods
 
-<p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/Primary_cnn_model_AUC.jpg?token=ASLEFKK5LNV2MRIPVQ5VFWTASHDBO' width="800">
-</p>
-
-## Results
+## 6. Results
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/table_model_accuracy.png?token=ASLEFKINEFXRE655HEM4KA3ASHE6O' width="800">
 </p>
@@ -60,7 +57,6 @@ Clayton Horsfall, Seil Kwon, Connor O’Brien, Aidan Worswick, Andrew Yuchen Lin
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Leveraging-Deep-Learning-Approaches-for-Brain-Tumor-Classification/main/Images/table_fewshot.png?token=ASLEFKOFR36ZLL2T3BUSEQLASHE7I' width="800">
 </p>
-
 
 ## Discussion
 
