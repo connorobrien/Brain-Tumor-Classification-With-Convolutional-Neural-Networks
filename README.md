@@ -142,12 +142,13 @@ To verify our GAN model, we changed our input to human faces, and the results ar
 </p>
 
 
+## 6. Results 
 
-To verify our GAN model, we changed our input to human faces, and the results are more intuitive to evaluate. Although very promising, the output quality is similarly below acceptable. 
+Our most accurate model was the one based off the ResNet18 architecture. This model had a perfect training accuracy and AUC, and a validation accuracy of 93.5% and AUC of 99.26%. AUC measures how well the algorithm is able distinguish between classes. A value of 0.5 means the model is no better than random, and a value of 1 means the model can perfectly separate the data into their correct classes.    
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_model_accuracy.png?token=ASLEFKLNLL3STSWLGLTZ6HLASHJ2Y' width="800">
 </p>
-## 6. Results
+
 The ResNet18 model was the most accurate, and it also included considerably less parameters than the other models. However, the difference across all four models AUC values is relatively small. Further, though the ResNet18 model yielded the highest prediction accuracy, our primary CNN model required considerably less epochs to before the model accuracy stabilized. Epochs define how many times the model will update its parameters by working through the training dataset. Below are the loss and AUC plots across for our primary CNN model and the ResNet18 model. The ResNet50 and ResNet101 plots are similar to the ResNet18’s. 
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_cnn_model_AUC.jpg?token=ASLEFKLEKNXSUSU4HDU4NA3ASHJ3M' width="800">
