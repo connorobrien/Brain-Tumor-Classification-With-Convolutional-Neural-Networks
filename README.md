@@ -121,7 +121,7 @@ In our experiment, we implemented prototypical networks for the problem of few-s
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/fewshot.jpg?token=ASLEFKNAXJKIVVRMD5D4GXLASHJVE' width="400">
 </p>
-As shown above, (a) Few-shot prototypes  are computed as the mean of embedded support examples for each class. (b) Zero-shot prototypes  are produced by embedding class meta-data . In either case, embedded query points are classified via a softmax over distances to class prototypes: . 
+As shown above, (a) Few-shot prototypes  are computed as the mean of embedded support examples for each class. (b) Zero-shot prototypes  are produced by embedding class meta-data . In either case, embedded query points are classified via a softmax over distances to class prototypes. 
 
 ### 5.4 Data Augmentation via Unsupervised Learning (GAN) 
 
