@@ -134,6 +134,7 @@ GAN is an unsupervised machine learning technique; the vanilla idea is that we s
 </p>
 Unfortunately, the results from our vanilla GAN model were too low in resolution to be used as input to our CNN models, but it is indeed an exciting field that many researchers are looking into and making breakthroughs. Below are examples of the input and output for our GAN model. 
 
+
 **Input Images:** 
 
 <p align="center">
