@@ -88,7 +88,7 @@ Although our initial plan was to use these methods and build the CNN model using
 We developed our baseline CNN model using insights gained from research on similar problems. We used a combination of the Keras library with a TensorFlow backend along with Pytorch. Our primary CNN approach uses convolution layers, max pooling, batch normalization, dense layers, dropout layers, and a categorical SoftMax classifier. The full model architecture is depicted below. 
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_model_architecture.jpg?token=ASLEFKKRWVFYBEE2DJN6PZLASHJR4' width="800">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_model_architecture.jpg?token=ASLEFKKRWVFYBEE2DJN6PZLASHJR4' width="600">
 </p>
 
 We experimented with various architectures and found this model performed well at classifying brain tumors in our data set. In subsequent sections, we compare this approach with other well-known CNN architectures. This CNN model has 30 layers and 33,774,340 parameters to be estimated. 
@@ -130,15 +130,15 @@ Unfortunately, the results from our vanilla GAN model were too low in resolution
 **Input Images:** 
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_input.png?token=ASLEFKNZKYG7D6MT7PEX3I3ASHJXG' width="700">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_input.png?token=ASLEFKNZKYG7D6MT7PEX3I3ASHJXG' width="600">
 </p>
 **Output Images:** 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_brains.png?token=ASLEFKJAITR3LCRD6R4EAX3ASHJXY' width="700">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_brains.png?token=ASLEFKJAITR3LCRD6R4EAX3ASHJXY' width="600">
 </p>
 To verify our GAN model, we changed our input to human faces, and the results are more intuitive to evaluate. Although very promising, the output quality is similarly below acceptable. 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_faces.png?token=ASLEFKMA3PCNEDBKICILKFLASHJYO' width="700">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_faces.png?token=ASLEFKMA3PCNEDBKICILKFLASHJYO' width="600">
 </p>
 
 
