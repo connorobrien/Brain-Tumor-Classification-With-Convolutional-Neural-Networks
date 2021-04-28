@@ -122,6 +122,13 @@ In our experiment, we implemented prototypical networks for the problem of few-s
 </p>
 As shown above, (a) Few-shot prototypes  are computed as the mean of embedded support examples for each class. (b) Zero-shot prototypes  are produced by embedding class meta-data . In either case, embedded query points are classified via a softmax over distances to class prototypes: . 
 
+### 5.4 Data Augmentation via Unsupervised Learning (GAN) 
+
+An effective CNN model requires a large amount of data to train. The more available quality input data, the better the CNN can be trained as a useful classifier. Yet, a major problem in the field of medical imaging is the data sets are often imbalanced, as abnormal findings are rare compared to normal ones. Another major issue is the restrictions around privacy and using patient data. Traditional data augmentation techniques, such as crops, flip, translation, rotation, are designed to tackle these challenges faced in data collection. However, the products created by these techniques are fundamentally highly correlated. 
+
+Therefore, to increase the sample size of our training data, we experimented with different Generative Adversarial Networks (GANs) for image synthesis. Yi et al, 2019, surveyed 150 published articles using adversarial training schemes in medical imaging. Common GAN medical image reconstruction approaches include pix2pix, CycleGan, and SGAN. Further, common loss measures adversarial loss and element wise fidelity loss, and common quantitative measures include normalized MSE with respect to ground trough and peak signal to noise ratio with respect to ground truth. 
+
+GAN is an unsupervised machine learning technique; the vanilla idea is that we simultaneously train two CNN models that competes against each other. The generator CNN is a forger trying to produce realistic counterfeits, and the detector CNN is a police officer trying to detect the fakes. We hoped GAN could produce useful tumor MRI resemblance, and greatly expand our training data size. Our basic GAN architecture consists of 3 layers of simple linear with accommodating ReLu activators and ends with a Tanh activator for the generator and a Sigmoid activator for the detector. 
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/sigmoid.png?token=ASLEFKJVCLMYXRC6CJLBRSDASHJV4' width="400">
 </p>
