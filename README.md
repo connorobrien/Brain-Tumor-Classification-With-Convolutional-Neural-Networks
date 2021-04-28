@@ -164,12 +164,12 @@ The ResNet18 model was the most accurate, and it also included considerably less
 
 **Primary CNN AUC and Loss:**
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_cnn_model_AUC.jpg?token=ASLEFKLEKNXSUSU4HDU4NA3ASHJ3M' width="500">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_cnn_model_AUC.jpg?token=ASLEFKLEKNXSUSU4HDU4NA3ASHJ3M' width="600">
 </p>
 
 **ResNet18 CNN AUC and Loss:**
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/ResNet18_AUC.jpg?token=ASLEFKLYAVAJUD5V6DBJGA3ASHJ34' width="500">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/ResNet18_AUC.jpg?token=ASLEFKLYAVAJUD5V6DBJGA3ASHJ34' width="600">
 </p>
 
 Although our semi-supervised Few-shot learning model used a small number of training data for each class, it still had accuracy of 0.89 using 3 samples and 0.87 accuracy using only 1 sample. N-way represents number of classes, and episode is the training iteration in the context of Few-shot Learning. It is a step in which we train the network, calculate loss, and backpropagate the error. For our experiment, we set our episodes to 20,000 and frame-size at 1,000. As shown below, it is remarkable that increase in training sample size is not proportional to increase in accuracy and that 3-shot learning achieved higher accuracy than our ResNet50 model. 
