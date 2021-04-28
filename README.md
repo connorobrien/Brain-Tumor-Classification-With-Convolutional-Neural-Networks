@@ -25,7 +25,7 @@ The data set was collected from two hospitals in China (Nanfang Hospital and Gen
 
 
 ## 4. Literature Survey
-### 4.1 Brain tumor classification using deep CNN features via transfer learning, March 2019 
+### 4.1 Brain Tumor Classification Using Deep CNN Features via Transfer Learning, March 2019 
 
 Computer Aided Diagnosis (CAD) is a relatively new medical application in which large volumes of data, particularly in the form of imagery, can be fed to a classification algorithm, yielding a level of certainty about the presence of brain tumors, tumor classification, brain atrophy, cognition loss, and more. This paper focuses on classifying brain tumors into three groups: glioma, meningioma, and pituitary. These three prominent types of brain tumor are sufficiently different in growth and treatment that accurate classification is critical to ensuring the right kind of care and treatment are provided. 
 
@@ -59,7 +59,8 @@ The authors found that their BoW approach, which utilized an image patch as a lo
 
 We will similarly use this model’s accuracy as a baseline for our CNN approach, though we will aim to achieve accuracies more in the realm of those achieved by expansions to this paper’s methods. Given the rapid growth in this subject, an accuracy of 95% should be our goal for our initial CNN model, which will then be compared to other pre-trained models like UNet and ResNet. 
 
-### 4.3 Multi-grade brain tumor classification using deep CNN with extensive data augmentation, July 2018 
+### 4.3 Multi-grade Brain Tumor Classification Using Deep CNN with Extensive Data A
+ugmentation, July 2018 
 
 The authors in this paper address one of the most common issues with CNN training, which is data availability and data-set size. They do so by expanding on previous deep CNN brain tumor classifications, while adding extensive data augmentation to work around the lack of data problem. We encountered this very problem in our initial attempt at Cognitive Atrophy, using 3D MRIs to classify the presence of Alzheimer’s Disease or mild cognitive impairment. Given the larger size of the image matrices, our dataset was smaller in quantity, and in training we observed no improvements to loss, accuracy, or AUC, as the classification was unable to pick up any important features. We attempted augmentation to expand the original dataset but found our methods inefficient. 
 
