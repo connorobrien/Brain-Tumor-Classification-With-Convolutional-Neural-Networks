@@ -17,7 +17,7 @@ Pituitary tumors are abnormal growths that occur in the pituitary gland of the b
 Due to the high variance in the risk level of these three types of brain tumors, an early and accurate diagnosis of the specific type of brain tumor is crucial to allow patients to receive timely treatment and an appropriate plan of care. Diagnosis of brain tumors typically begins with Magnetic Resonance Imaging (MRI) scans to observe that a tumor is present. After an MRI scan shows a patient has a brain, doctors will determine the type of brain tumor by conducting a biopsy or surgery. This process has large financial and time costs, and a machine learning approach to brain tumor classification from MRIs could greatly improve patient outcomes. 
 
 ## 2. Problem Definition
-Construct a deep learning convolution neural network (CNN) model to classify brain tumors as gliomas, meningiomas, and pituitary tumors, using 2D MRI brain scans. 
+Construct a deep learning convolution neural network (CNN) model to classify brain tumors as gliomas, meningiomas, and pituitary tumors, using 2D slices from MRI brain scans. 
 
 ## 3. Data Collection
 
@@ -81,9 +81,10 @@ This paper also uses the same brain tumor dataset we will use in our analysis, a
 Conclusively, this paper posits that expanding the data set with parameter adjustments can improve model performance. Their accuracy post-augmentation of 94.58% is in-line with, if not better than, current state-of-the-art models, though they concede that future work would involve more focus on the deep learning model (i.e., something other than VGG19, or perhaps more tuning to it). They further acknowledge the cost-benefit of computational needs of running a model on 3000 versus 90,000 images and propose a lighter-weight CNN to ease those computational constraints. 
 
 ## 5. Methods
-For this project, we implemented several 2D CNN architectures to classify different types of brain tumors. Previous studies using CNNs with brain MRIs for medical diagnoses have used either 2D or 3D images. With 3D images, the models can take advantage of additional context to improve model performance. However, this additional context comes at a large computational cost as training a CNN with 3D images requires far more parameters to be estimated. Several preprocessing methods have been proposed to reduce the computational cost of using 3D MRI images, while still maintaining the additional context the images provide when compared to using 2D MR images. 
+For this project, we implemented several 2D CNN architectures to classify different types of brain tumors. Previous studies using CNNs with brain MRIs for medical diagnoses have used either 2D or 3D images. With 3D images, the models can take advantage of additional context to improve model performance. However, this additional context comes at a large computational cost as training a CNN with 3D images requires far more parameters to be estimated. Several preprocessing methods have been proposed to reduce the computational cost of using 3D MRI images, while still maintaining the additional context the images provide when compared to using 2D MRI images. 
 
-Although our initial plan was to use these methods and build the CNN model using 3D data, there were several challenges that directed us to alternatively use the 2D CNN model for this project. While each 2D image was trained on resolution of 512 x 512 pixels with size of 200KB, 3D images were trained on high resolution of 256 x 256 x 170 with size that exceeded 40MB per image. Because of the large 3D data size, the speed of training our 3D model became an issue. While training iterations for the 2D CNN finished within a day, it may have taken over weeks to train the 3D CNN models on our GPU if we increased the epochs, which in turn made it hard to tune the parameters in time. Moreover, while the 3D patches had a depth of 166, the 3D CNN had a much smaller output stride, which caused complications with the max pooling layers. For these reasons, we built a 2D CNN model for our experiment. 
+Although our initial plan was to use these methods and build the CNN model using 3D data, there were several challenges that directed us to alternatively use a 2D CNN model for this project. While each 2D image was trained on a resolution of 512 x 512 pixels with a size of 200KB, 3D images were trained on high resolution of 256 x 256 x 170 with a size that exceeded 40MB per image. Because of the large 3D data size, the speed of training our 3D model became an issue. This in turn made it hard to tune the parameters to improve our model. Moreover, while the 3D patches had a depth of 166, the 3D CNN had a much smaller output stride, which caused complications with the max pooling layers. For these reasons, we built a 2D CNN model for our experiment.
+
 ### 5.1 Primary CNN Model 
 
 We developed our baseline CNN model using insights gained from research on similar problems. We used a combination of the Keras library with a TensorFlow backend along with Pytorch. Our primary CNN approach uses convolution layers, max pooling, batch normalization, dense layers, dropout layers, and a categorical SoftMax classifier. The full model architecture is depicted below. 
@@ -117,34 +118,34 @@ Few-shot classification is a semi-supervised learning problem in which a classif
 
 In our experiment, we implemented prototypical networks for the problem of few-shot classification, where a classifier must generalize to new classes, given only a small number of examples of each new class. Prototypical networks learn a metric space in which classification can be performed by computing distances to prototype representations of each class. Compared to recent approaches for few-shot learning, they reflect a simpler inductive bias that is beneficial in this limited-data environment and achieve excellent results. 
 
-
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/fewshot.jpg?token=ASLEFKNAXJKIVVRMD5D4GXLASHJVE' width="400">
 </p>
+
 As shown above, (a) Few-shot prototypes  are computed as the mean of embedded support examples for each class. (b) Zero-shot prototypes  are produced by embedding class meta-data . In either case, embedded query points are classified via a softmax over distances to class prototypes. 
 
 ### 5.4 Data Augmentation via Unsupervised Learning (GAN) 
 
 An effective CNN model requires a large amount of data to train. The more available quality input data, the better the CNN can be trained as a useful classifier. Yet, a major problem in the field of medical imaging is the data sets are often imbalanced, as abnormal findings are rare compared to normal ones. Another major issue is the restrictions around privacy and using patient data. Traditional data augmentation techniques, such as crops, flip, translation, rotation, are designed to tackle these challenges faced in data collection. However, the products created by these techniques are fundamentally highly correlated. 
 
-Therefore, to increase the sample size of our training data, we experimented with different Generative Adversarial Networks (GANs) for image synthesis. Yi et al, 2019, surveyed 150 published articles using adversarial training schemes in medical imaging. Common GAN medical image reconstruction approaches include pix2pix, CycleGan, and SGAN. Further, common loss measures adversarial loss and element wise fidelity loss, and common quantitative measures include normalized MSE with respect to ground trough and peak signal to noise ratio with respect to ground truth. 
+Therefore, to increase the sample size of our training data, we experimented with different Generative Adversarial Networks (GANs) for image synthesis. Yi et al, 2019, surveyed 150 published articles using adversarial training schemes in medical imaging. Common GAN medical image reconstruction approaches include pix2pix, CycleGan, and SGAN. Further, common loss measures adversarial loss and element wise fidelity loss, and common quantitative measures include normalized MSE with respect to ground truth and peak signal to noise ratio with respect to ground truth. 
 
 GAN is an unsupervised machine learning technique; the vanilla idea is that we simultaneously train two CNN models that competes against each other. The generator CNN is a forger trying to produce realistic counterfeits, and the detector CNN is a police officer trying to detect the fakes. We hoped GAN could produce useful tumor MRI resemblance, and greatly expand our training data size. Our basic GAN architecture consists of 3 layers of simple linear with accommodating ReLu activators and ends with a Tanh activator for the generator and a Sigmoid activator for the detector. 
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/sigmoid.png?token=ASLEFKJVCLMYXRC6CJLBRSDASHJV4' width="400">
 </p>
-Unfortunately, the results from our vanilla GAN model were too low in resolution to be used as input to our CNN models, but it is indeed an exciting field that many researchers are looking into and making breakthroughs. Below are examples of the input and output for our GAN model. 
 
+Unfortunately, the results from our vanilla GAN model were too low in resolution to be used as input to our CNN models, but it is indeed an exciting field that many researchers are looking into and making breakthroughs. Below are examples of the input and output for our GAN model. 
 
 **Input Images:** 
 
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_input.png?token=ASLEFKNZKYG7D6MT7PEX3I3ASHJXG' width="400">
 </p>
-
+<p align="center">
 **Output Images:** 
 
-<p align="center">
+
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_brains.png?token=ASLEFKJAITR3LCRD6R4EAX3ASHJXY' width="400">
 </p>
 To verify our GAN model, we changed our input to human faces, and the results are more intuitive to evaluate. Although very promising, the output quality is similarly below acceptable. 
