@@ -97,7 +97,7 @@ The model classifies the brain tumors into three groups: glioma, meningioma, and
 
 The model was optimized using the Adam algorithm introduced by Kingma et al., 2014. Our Adam algorithm has an initial learning rate of 0.001 with a custom exponential decay schedule. The Adam algorithm is considered to be well-suited for deep learning, natural language processing, and, in our case, computer vision. It further has benefits for our use-case, as it is easy to implement and is computationally efficient. Adam combines features of momentum and adaptive learning rate algorithms to converge quickly without a loss of accuracy. 
 
-### 3.2 ResNet 
+### 5.2 ResNet 
 
 ResNet (residual neural network) is a set of neural network architectures that address the vanishing gradient problem by introducing short-cut connections. CNNs that are deep with many layers can face the vanishing gradient problem where the gradient becomes too small for the weights to update effectively, and the model cannot learn on the given dataset. In this situation, the accuracy saturates and degrades quickly. ResNet uses residual blocks and short-cut connections that bypass certain stacked layers with an identity mapping. 
 
@@ -110,7 +110,7 @@ The above diagram shows how these short-cut connections work. CNN layers typical
 In this project, we experiment we three different variations of ResNet; namely, ResNet18, ResNet50, and ResNet101. The number at the end of each variation’s name represents the number of layers in the residual neural network. When determining the number of layers to include in a deep CNN, we face a trade-off between accuracy and computational complexity. As we increase the number of layers, the model estimates many more parameters, allowing the CNN to accurately fit to more complex relationship in the data. This increased accuracy comes at the cost of requiring more computational power to estimate these parameters. There is also increased risk of overfitting to the training data as we increase the number of layers.  
 
 
-### 3.3 Few-shot Learning  
+### 5.3 Few-shot Learning  
 
 Few-shot classification is a semi-supervised learning problem in which a classifier must be adapted to accommodate new classes not seen in training, given only a few examples of each of these classes. A naïve approach, such as retraining the model on the new data, would severely overfit. While the problem is quite difficult, it has been demonstrated that the algorithm has ability to perform even one-shot classification, where only a single example of each new class is given with a high degree of accuracy. 
 
@@ -163,7 +163,7 @@ Although our semi-supervised Few-shot learning model used a small number of trai
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_fewshot.png?token=ASLEFKORLXMWR4GZLHXMHOTASHJ4Q' width="800">
 </p>
 
-## Discussion
+## 7. Discussion
 Deepak and Ameer, with their transfer-learning model applied to the same brain tumor dataset, achieved 92.3% accuracy on their baseline model, 97.8% with their SVM classifier, and 98.0% accuracy with their KNN classifier. Their full SVM classifier model produced AUC values of 99.9%, 99.7%, and 99.5% for Gliomas, Pituitaries, and Meningiomas respectively. Cheng et al. obtained an overall accuracy of 92.18% using their expanded tumor region dilation and augmentation method, with a sensitivity and specificity of 81% and 92%, respectively. Sajjad et al. achieved a sensitivity, specificity, and accuracy of 88.41%, 96.12%, and 94.58% with their 30-parameter data augmentation approach. 
 
 With our custom CNN architecture achieving a 90.83% validation accuracy, our best ResNet model achieving a 93.05% validation accuracy, and our best few-shot model achieving an 89.63% prediction accuracy, our approaches highlight methods that didn’t quite perform to the state-of-the-art benchmarks, as well as methods that met those benchmarks. 
