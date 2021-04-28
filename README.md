@@ -146,21 +146,21 @@ To verify our GAN model, we changed our input to human faces, and the results ar
 
 Our most accurate model was the one based off the ResNet18 architecture. This model had a perfect training accuracy and AUC, and a validation accuracy of 93.5% and AUC of 99.26%. AUC measures how well the algorithm is able distinguish between classes. A value of 0.5 means the model is no better than random, and a value of 1 means the model can perfectly separate the data into their correct classes.    
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_model_accuracy.png?token=ASLEFKLNLL3STSWLGLTZ6HLASHJ2Y' width="800">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_model_accuracy.png?token=ASLEFKLNLL3STSWLGLTZ6HLASHJ2Y' width="400">
 </p>
 
 The ResNet18 model was the most accurate, and it also included considerably less parameters than the other models. However, the difference across all four models AUC values is relatively small. Further, though the ResNet18 model yielded the highest prediction accuracy, our primary CNN model required considerably less epochs to before the model accuracy stabilized. Epochs define how many times the model will update its parameters by working through the training dataset. Below are the loss and AUC plots across for our primary CNN model and the ResNet18 model. The ResNet50 and ResNet101 plots are similar to the ResNet18’s. 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_cnn_model_AUC.jpg?token=ASLEFKLEKNXSUSU4HDU4NA3ASHJ3M' width="800">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_cnn_model_AUC.jpg?token=ASLEFKLEKNXSUSU4HDU4NA3ASHJ3M' width="400">
 </p>
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/ResNet18_AUC.jpg?token=ASLEFKLYAVAJUD5V6DBJGA3ASHJ34' width="800">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/ResNet18_AUC.jpg?token=ASLEFKLYAVAJUD5V6DBJGA3ASHJ34' width="400">
 </p>
 
 Although our semi-supervised Few-shot learning model used a small number of training data for each class, it still had accuracy of 0.89 using 3 samples and 0.87 accuracy using only 1 sample. N-way represents number of classes, and episode is the training iteration in the context of Few-shot Learning. It is a step in which we train the network, calculate loss, and backpropagate the error. For our experiment, we set our episodes to 20,000 and frame-size at 1,000. As shown below, it is remarkable that increase in training sample size is not proportional to increase in accuracy and that 3-shot learning achieved higher accuracy than our ResNet50 model. 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_fewshot.png?token=ASLEFKORLXMWR4GZLHXMHOTASHJ4Q' width="800">
+  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_fewshot.png?token=ASLEFKORLXMWR4GZLHXMHOTASHJ4Q' width="400">
 </p>
 
 ## 7. Discussion
