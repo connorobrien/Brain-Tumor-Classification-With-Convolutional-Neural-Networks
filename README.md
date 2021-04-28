@@ -142,10 +142,9 @@ Unfortunately, the results from our vanilla GAN model were too low in resolution
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_input.png?token=ASLEFKNZKYG7D6MT7PEX3I3ASHJXG' width="400">
 </p>
-<p align="center">
+
 **Output Images:** 
-
-
+<p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_brains.png?token=ASLEFKJAITR3LCRD6R4EAX3ASHJXY' width="400">
 </p>
 To verify our GAN model, we changed our input to human faces, and the results are more intuitive to evaluate. Although very promising, the output quality is similarly below acceptable. 
@@ -156,12 +155,12 @@ To verify our GAN model, we changed our input to human faces, and the results ar
 
 ## 6. Results 
 
-Our most accurate model was the one based off the ResNet18 architecture. This model had a perfect training accuracy and AUC, and a validation accuracy of 93.5% and AUC of 99.26%. AUC measures how well the algorithm is able to distinguish between classes. A value of 0.5 means the model is no better than random, and a value of 1 means the model can perfectly separate the data into their correct classes.    
+Our most accurate model was based off the ResNet18 architecture. This model had a perfect training accuracy and AUC, and a validation accuracy of 93.5% and AUC of 99.26%. AUC measures how well the algorithm is able to distinguish between classes. A value of 0.5 means the model is no better than random, and a value of 1 means the model can perfectly separate the data into their correct classes.    
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_model_accuracy.png?token=ASLEFKLNLL3STSWLGLTZ6HLASHJ2Y' width="500">
 </p>
 
-The ResNet18 model was the most accurate, and it also included considerably less parameters than the other models. However, the difference across all four models AUC values is relatively small. Further, though the ResNet18 model yielded the highest prediction accuracy, our primary CNN model required considerably less epochs to before the model accuracy stabilized. Epochs define how many times the model will update its parameters by working through the training dataset. Below are the loss and AUC plots across for our primary CNN model and the ResNet18 model. The ResNet50 and ResNet101 plots are similar to the ResNet18’s. 
+The ResNet18 model was the most accurate, and it also included considerably less parameters than the other models. However, the difference across all four models' AUC values is relatively small. Further, though the ResNet18 model yielded the highest prediction accuracy, our primary CNN model required considerably less epochs before the model accuracy stabilized. Epochs define how many times the model will update its parameters by working through the training dataset. Below are the loss and AUC plots across for our primary CNN model and the ResNet18 model. The ResNet50 and ResNet101 plots are similar to the ResNet18’s. 
 
 **Primary CNN AUC and Loss:**
 <p align="center">
@@ -173,7 +172,7 @@ The ResNet18 model was the most accurate, and it also included considerably less
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/ResNet18_AUC.jpg?token=ASLEFKLYAVAJUD5V6DBJGA3ASHJ34' width="600">
 </p>
 
-Although our semi-supervised Few-shot learning model used a small number of training data for each class, it still had accuracy of 0.89 using 3 samples and 0.87 accuracy using only 1 sample. N-way represents number of classes, and episode is the training iteration in the context of Few-shot Learning. It is a step in which we train the network, calculate loss, and backpropagate the error. For our experiment, we set our episodes to 20,000 and frame-size at 1,000. As shown below, it is remarkable that increase in training sample size is not proportional to increase in accuracy and that 3-shot learning achieved higher accuracy than our ResNet50 model. 
+Although our semi-supervised Few-shot learning model used a small number of training data for each class, it still had an accuracy of 0.89 using 3 samples and 0.87 accuracy using only 1 sample. N-way represents number of classes, and episode is the training iteration in the context of Few-shot Learning. It is a step in which we train the network, calculate the loss, and backpropagate the error. For our experiment, we set our episodes to 20,000 and frame-size at 1,000. As shown below, it is remarkable that an increase in training sample size is not proportional to increase in accuracy, and that 3-shot learning achieved higher accuracy than our ResNet50 model. 
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_fewshot.png?token=ASLEFKORLXMWR4GZLHXMHOTASHJ4Q' width="500">
 </p>
@@ -181,9 +180,9 @@ Although our semi-supervised Few-shot learning model used a small number of trai
 ## 7. Discussion
 Deepak and Ameer, with their transfer-learning model applied to the same brain tumor dataset, achieved 92.3% accuracy on their baseline model, 97.8% with their SVM classifier, and 98.0% accuracy with their KNN classifier. Their full SVM classifier model produced AUC values of 99.9%, 99.7%, and 99.5% for Gliomas, Pituitaries, and Meningiomas respectively. Cheng et al. obtained an overall accuracy of 92.18% using their expanded tumor region dilation and augmentation method, with a sensitivity and specificity of 81% and 92%, respectively. Sajjad et al. achieved a sensitivity, specificity, and accuracy of 88.41%, 96.12%, and 94.58% with their 30-parameter data augmentation approach. 
 
-With our custom CNN architecture achieving a 90.83% validation accuracy, our best ResNet model achieving a 93.05% validation accuracy, and our best few-shot model achieving an 89.63% prediction accuracy, our approaches highlight methods that didn’t quite perform to the state-of-the-art benchmarks, as well as methods that met those benchmarks. 
+With our custom CNN architecture achieving a 90.83% validation accuracy, our best ResNet model achieving a 93.05% validation accuracy, and our best Few-shot model achieving an 89.63% prediction accuracy, our approaches highlight methods that didn’t quite perform to the state-of-the-art benchmarks, as well as methods that met those benchmarks. 
 
-Moreover, although Prototypical Networks produced great results despite using only few samples of data, they still have limitations. First, they lack generalization. They produced an accuracy close to 99% on dataset like Omniglot because handwritten characters share similar characteristics; however, as shown from our experiment, accuracies decrease on complex data like medical images. Another limitation is prototypical networks only use mean to decide the center, ignoring the variance in support set. Therefore, we can also consider using other Few-shot learning methods such as Gaussian Prototypical Networks or Triplet loss for more complicated tasks. 
+Moreover, although Prototypical Networks produced great results despite using only few samples of data, they still have limitations. First, they lack generalization. They produced an accuracy close to 99% on dataset like Omniglot because handwritten characters share similar characteristics; however, as shown from our experiment, accuracies decrease on complex data like medical images. Another limitation is prototypical networks only use mean to decide the center, ignoring the variance in the support set. Therefore, we can also consider using other Few-shot learning methods such as Gaussian Prototypical Networks or Triplet loss for more complicated tasks. 
 
 We see room to improve upon our models in a few areas. While the dataset was reasonably large, we would have liked to incorporate degrees of data augmentation to artificially inflate the training data. Several studies (Wyman et. al.) have shown data augmentation approaches that have been successful in the medical image classification field. Further, we utilized a GPU for our models, but still encountered memory errors. If we were able to access more RAM or improve the efficiency of our CNN models, we may have been able to further improve the model performance. 
 
