@@ -157,10 +157,13 @@ Our most accurate model was the one based off the ResNet18 architecture. This mo
 </p>
 
 The ResNet18 model was the most accurate, and it also included considerably less parameters than the other models. However, the difference across all four models AUC values is relatively small. Further, though the ResNet18 model yielded the highest prediction accuracy, our primary CNN model required considerably less epochs to before the model accuracy stabilized. Epochs define how many times the model will update its parameters by working through the training dataset. Below are the loss and AUC plots across for our primary CNN model and the ResNet18 model. The ResNet50 and ResNet101 plots are similar to the ResNet18’s. 
+
+**Primary CNN AUC and Loss:**
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_cnn_model_AUC.jpg?token=ASLEFKLEKNXSUSU4HDU4NA3ASHJ3M' width="400">
 </p>
 
+**ResNet18 CNN AUC and Loss:**
 <p align="center">
   <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/ResNet18_AUC.jpg?token=ASLEFKLYAVAJUD5V6DBJGA3ASHJ34' width="400">
 </p>
