@@ -11,7 +11,7 @@ Meningiomas are common tumors of the brain and spinal cord. Most meningiomas are
 Pituitary tumors are abnormal growths that occur in the pituitary gland of the brain and are commonly benign. Pituitary tumors follow a similar treatment plan to meningiomas, where observation and/or surgery is most common and radiation therapy is typically used to treat cancerous tumors.  
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/different_tumor_types.png?token=ASLEFKNFMICL2ZHTHY7S2ZTASHJI2' width="600">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/different_tumor_types.png?token=ARVC4UVAEPISOLM4SECK7JLA27A6Q' width="600">
 </p>
 
 Due to the high variance in the risk level of these three types of brain tumors, an early and accurate diagnosis of the specific type of brain tumor is crucial to allow patients to receive timely treatment and an appropriate plan of care. Diagnosis of brain tumors typically begins with Magnetic Resonance Imaging (MRI) scans to observe that a tumor is present. After an MRI scan shows a patient has a brain, doctors will determine the type of brain tumor by conducting a biopsy or surgery. This process has large financial and time costs, and a machine learning approach to brain tumor classification from MRIs could greatly improve patient outcomes. 
@@ -34,7 +34,7 @@ The proposed system in this paper uses a pretrained GoogLeNet for feature extrac
 Brain tumor subtype classification has seen rapid advancement in the last six years, largely due to high-contrast MRI advantages over traditional computed tomography (CT) images for soft tissue in the brain, as well as extensive study on deep-learning approaches. Because brain tumors exhibit high variation in size, shape, and intensity, tumors across classifications may show similar appearance on an MRI, presenting a large challenge for improving upon existing models. The primary advantage of this paper’s proposed transfer learned CNN model is that it can provide considerably “good” performance even when there is a small training data set. 
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/googlenet.jpg?token=ASLEFKPKRS26TH7FB7XEF23ASHJL6' width="600">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/googlenet.jpg?token=ARVC4UUMZCMFT5HFV4KMR3LA27A72' width="600">
 </p>
   
 The GoogLeNet network, the knowledge from which the authors transferred to their CNN, is a 22-layer network which has been recognized as the top-performing image-recognition network in the 2014 Imagenet Large Scale Visual Recognition Challenge. To augment the GoogLeNet network to the three-type classification problem for brain tumors, the authors modified the last three layers of GoogLeNet to adapt it to the MRI dataset. They substituted the Fully Connected (FC) layer with a new one that had an output size of three, and similarly replaced the softmax layer and the cross-entropy-based classification layer. 
@@ -42,7 +42,7 @@ The GoogLeNet network, the knowledge from which the authors transferred to their
 In pre-processing, the MRIs were normalized in intensity between 0 and 1, and resized from 512x512 to 224x224, which aligned with GoogLeNet’s original input-size. They also used Adam as their optimizer, which we will also utilize in our CNN as it is generally accepted to have great performance per computational requirement. Their initial learning rate was 0.0003. Using accuracy as their measure (correctly classified samples, divided by total samples), they achieved 97.8% accuracy with a Support Vector Machine (SVM) classifier on their CNN features, and a 98.0% accuracy with a K-Nearest Neighbors (KNN) classifier. 
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/googlenet2.jpg?token=ASLEFKPZFRNTCGWW4R4NTM3ASHJOU' width="500">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/googlenet2.jpg?token=ARVC4UXRMLCDAEAY2YBPIALA27BAG' width="500">
 </p>
   
  The authors found that most misclassifications pertained to the meningioma tumor type, citing that this was the smallest class in the data sample, and that no specific data augmentation was used to balance the dataset either. They cite future work as using data augmentation to balance this, as they noted overfitting when they decreased the training size by 75%.
@@ -69,7 +69,7 @@ The focus on the tumors themselves in this analysis is centered on the grade of 
 The approach, which claims to be the first attempt at CAD implementation on WHO standards for cancer grade classification, works as follows: the brain tumor is segmented from the MRO, the segmented region is augmented with various techniques, and a classification is made into one of four grades. All convolutional layers in their CNN model use 3x3 kernels on a single stride, including the initial stride. 
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/augmentation.jpg?token=ASLEFKJHNB2ZPOBI6L6UMFLASHJP2' width="500">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/augmentation.jpg?token=ARVC4UR4G42AIGVY7UYKLC3A27A6G' width="500">
 </p>
   
 The primary focus of this paper, as previously stated, is the data-augmentation section. To build a more robust data set for their deep learning, the authors performed eight different augmentation techniques: rotation, flipping, skewness, shearing, Gaussian blur, sharpening, edge detection, and emboss. Within these techniques, they utilize 30 different parameters to extend each sample of data into 30 samples. 
@@ -90,7 +90,7 @@ Although our initial plan was to use these methods and build the CNN model using
 We developed our baseline CNN model using insights gained from research on similar problems. We used a combination of the Keras library with a TensorFlow backend along with Pytorch. Our primary CNN approach uses convolution layers, max pooling, batch normalization, dense layers, dropout layers, and a categorical SoftMax classifier. The full model architecture is depicted below. 
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_model_architecture.jpg?token=ASLEFKKRWVFYBEE2DJN6PZLASHJR4' width="600">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_model_architecture.jpg?token=ARVC4URZ5XAF6DUAT5GCHODA27A5W' width="600">
 </p>
 
 We experimented with various architectures and found this model performed well at classifying brain tumors in our data set. In subsequent sections, we compare this approach with other well-known CNN architectures. This CNN model has 30 layers and 33,774,340 parameters to be estimated. 
@@ -104,7 +104,7 @@ The model was optimized using the Adam algorithm introduced by Kingma et al., 20
 ResNet (residual neural network) is a set of neural network architectures that address the vanishing gradient problem by introducing short-cut connections. CNNs that are deep with many layers can face the vanishing gradient problem where the gradient becomes too small for the weights to update effectively, and the model cannot learn on the given dataset. In this situation, the accuracy saturates and degrades quickly. ResNet uses residual blocks and short-cut connections that bypass certain stacked layers with an identity mapping. 
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/resnet.jpg?token=ASLEFKJR3OJNME7V2XN5MYLASHJT4' width="500">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/resnet.jpg?token=ARVC4UUFTEQSPZ7ZUJJKPBLA27BAA' width="500">
 </p>
 
 The above diagram shows how these short-cut connections work. CNN layers typically map an input x to an output G(x). Since the direct mapping of x to G(x) can be difficult to learn due the vanishing gradient, we can instead learn the direct mapping of the residual, F(x), where F(x) = G(x) – x. Above, we have a layer learn F(x) and then have an identity mapping to add x to it. This achieves the same G(x) that we are interested in, but we do not need to worry about the gradient becoming too small. This identity mapping solves the vanishing gradient problem by allowing the gradient to flow through this alternate path. ResNets have been shown to be highly effective at training extremely deep neural networks. 
@@ -119,7 +119,7 @@ Few-shot classification is a semi-supervised learning problem in which a classif
 In our experiment, we implemented prototypical networks for the problem of few-shot classification, where a classifier must generalize to new classes, given only a small number of examples of each new class. Prototypical networks learn a metric space in which classification can be performed by computing distances to prototype representations of each class. Compared to recent approaches for few-shot learning, they reflect a simpler inductive bias that is beneficial in this limited-data environment and achieve excellent results. 
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/fewshot.jpg?token=ASLEFKNAXJKIVVRMD5D4GXLASHJVE' width="400">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/fewshot.jpg?token=ARVC4UQWDJY4MBO26P7KSOLA27A6Y' width="400">
 </p>
 
 As shown above, (a) Few-shot prototypes  are computed as the mean of embedded support examples for each class. (b) Zero-shot prototypes  are produced by embedding class meta-data . In either case, embedded query points are classified via a softmax over distances to class prototypes. 
@@ -132,7 +132,7 @@ Therefore, to increase the sample size of our training data, we experimented wit
 
 GAN is an unsupervised machine learning technique; the vanilla idea is that we simultaneously train two CNN models that competes against each other. The generator CNN is a forger trying to produce realistic counterfeits, and the detector CNN is a police officer trying to detect the fakes. We hoped GAN could produce useful tumor MRI resemblance, and greatly expand our training data size. Our basic GAN architecture consists of 3 layers of simple linear with accommodating ReLu activators and ends with a Tanh activator for the generator and a Sigmoid activator for the detector. 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/sigmoid.png?token=ASLEFKJVCLMYXRC6CJLBRSDASHJV4' width="400">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/sigmoid.png?token=ARVC4UTCQZA5J3BRHAPXGS3A27BAU' width="400">
 </p>
 
 Unfortunately, the results from our vanilla GAN model were too low in resolution to be used as input to our CNN models, but it is indeed an exciting field that many researchers are looking into and making breakthroughs. Below are examples of the input and output for our GAN model. 
@@ -140,16 +140,16 @@ Unfortunately, the results from our vanilla GAN model were too low in resolution
 **Input Images:** 
 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_input.png?token=ASLEFKNZKYG7D6MT7PEX3I3ASHJXG' width="400">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_input.png?token=ARVC4UXEV74S6TDHT4GWTJDA27A7Q' width="400">
 </p>
 
 **Output Images:** 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_brains.png?token=ASLEFKJAITR3LCRD6R4EAX3ASHJXY' width="400">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_brains.png?token=ARVC4UWSNI7253PVT2F4MWDA27A7A' width="400">
 </p>
 To verify our GAN model, we changed our input to human faces, and the results are more intuitive to evaluate. Although very promising, the output quality is similarly below acceptable. 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_faces.png?token=ASLEFKMA3PCNEDBKICILKFLASHJYO' width="400">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/gan_faces.png?token=ARVC4USQS2QGJGML3PXBJFDA27A7I' width="400">
 </p>
 
 
@@ -157,24 +157,24 @@ To verify our GAN model, we changed our input to human faces, and the results ar
 
 Our most accurate model was based off the ResNet18 architecture. This model had a perfect training accuracy and AUC, and a validation accuracy of 93.5% and AUC of 99.26%. AUC measures how well the algorithm is able to distinguish between classes. A value of 0.5 means the model is no better than random, and a value of 1 means the model can perfectly separate the data into their correct classes.    
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_model_accuracy.png?token=ASLEFKLNLL3STSWLGLTZ6HLASHJ2Y' width="500">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_model_accuracy.png?token=ARVC4UUB5HV5VFHO7O6IKYTA27BA2' width="500">
 </p>
 
 The ResNet18 model was the most accurate, and it also included considerably less parameters than the other models. However, the difference across all four models' AUC values is relatively small. Further, though the ResNet18 model yielded the highest prediction accuracy, our primary CNN model required considerably less epochs before the model accuracy stabilized. Epochs define how many times the model will update its parameters by working through the training dataset. Below are the loss and AUC plots across for our primary CNN model and the ResNet18 model. The ResNet50 and ResNet101 plots are similar to the ResNet18’s. 
 
 **Primary CNN AUC and Loss:**
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_cnn_model_AUC.jpg?token=ASLEFKLEKNXSUSU4HDU4NA3ASHJ3M' width="600">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/Primary_cnn_model_AUC.jpg?token=ARVC4UTVZVMES7KILCB44WLA27A5M' width="600">
 </p>
 
 **ResNet18 CNN AUC and Loss:**
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/ResNet18_AUC.jpg?token=ASLEFKLYAVAJUD5V6DBJGA3ASHJ34' width="600">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/ResNet18_AUC.jpg?token=ARVC4UUR5HTCYMHVV6ODTIDA27A54' width="600">
 </p>
 
 Although our semi-supervised Few-shot learning model used a small number of training data for each class, it still had an accuracy of 0.89 using 3 samples and 0.87 accuracy using only 1 sample. N-way represents number of classes, and episode is the training iteration in the context of Few-shot Learning. It is a step in which we train the network, calculate the loss, and backpropagate the error. For our experiment, we set our episodes to 20,000 and frame-size at 1,000. As shown below, it is remarkable that an increase in training sample size is not proportional to increase in accuracy, and that 3-shot learning achieved higher accuracy than our ResNet50 model. 
 <p align="center">
-  <img src='https://raw.githubusercontent.com/connorobrienedu/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_fewshot.png?token=ASLEFKORLXMWR4GZLHXMHOTASHJ4Q' width="500">
+  <img src='https://raw.githubusercontent.com/connorobrien/Brain-Tumor-Classification-With-Convolutional-Neural-Networks/main/Images/table_fewshot.png?token=ARVC4UXRBRXPEMXEPPM5AITA27BAO' width="500">
 </p>
 
 ## 7. Discussion
